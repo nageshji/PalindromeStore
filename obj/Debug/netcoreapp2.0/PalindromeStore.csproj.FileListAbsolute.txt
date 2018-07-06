@@ -1,0 +1,11 @@
+c:\users\nages\source\repos\PalindromeStore\PalindromeStore\bin\Debug\netcoreapp2.0\PalindromeStore.deps.json
+c:\users\nages\source\repos\PalindromeStore\PalindromeStore\bin\Debug\netcoreapp2.0\PalindromeStore.runtimeconfig.json
+c:\users\nages\source\repos\PalindromeStore\PalindromeStore\bin\Debug\netcoreapp2.0\PalindromeStore.runtimeconfig.dev.json
+c:\users\nages\source\repos\PalindromeStore\PalindromeStore\bin\Debug\netcoreapp2.0\PalindromeStore.dll
+c:\users\nages\source\repos\PalindromeStore\PalindromeStore\bin\Debug\netcoreapp2.0\PalindromeStore.pdb
+c:\users\nages\source\repos\PalindromeStore\PalindromeStore\obj\Debug\netcoreapp2.0\PalindromeStore.csprojAssemblyReference.cache
+c:\users\nages\source\repos\PalindromeStore\PalindromeStore\obj\Debug\netcoreapp2.0\PalindromeStore.csproj.CoreCompileInputs.cache
+c:\users\nages\source\repos\PalindromeStore\PalindromeStore\obj\Debug\netcoreapp2.0\PalindromeStore.AssemblyInfoInputs.cache
+c:\users\nages\source\repos\PalindromeStore\PalindromeStore\obj\Debug\netcoreapp2.0\PalindromeStore.AssemblyInfo.cs
+c:\users\nages\source\repos\PalindromeStore\PalindromeStore\obj\Debug\netcoreapp2.0\PalindromeStore.dll
+c:\users\nages\source\repos\PalindromeStore\PalindromeStore\obj\Debug\netcoreapp2.0\PalindromeStore.pdb
