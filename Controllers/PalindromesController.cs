@@ -50,12 +50,20 @@ namespace PalindromeStore.Controllers
                bool isValidPalindrome = PalindromeOps.PalindromeTester(palindrome.Text);
                if(isValidPalindrome)
                 {
-                    await _palindromeStoreRepository.AddPalindromeAsync(palindrome);
-                    return RedirectToAction(nameof(Index));
+                    if (await _palindromeStoreRepository.AddPalindromeAsync(palindrome))
+                    {
+                        _logger.LogInformation("New Palindrome " + palindrome.Text + "is added to the store");
+                        ModelState.AddModelError("PalindromeCreate", "Given string is not a Palindrome");
+                        return RedirectToAction(nameof(Index));
+                    }
+                    else
+                    {
+                        _logger.LogError("Error in adding new Palindrome " + palindrome.Text);
+                    }
                 }
                else
                 {
-                    ModelState.AddModelError("IsPalindrome", "Given string is not a Palindrome");
+                    ModelState.AddModelError("NotPalindrome", "Given string is not a Palindrome");
                 }               
                
             }
@@ -83,9 +91,17 @@ namespace PalindromeStore.Controllers
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
-        {            
-            await _palindromeStoreRepository.DeletePalindromeAsync(id);
-            return RedirectToAction(nameof(Index));
+        {
+            if (await _palindromeStoreRepository.DeletePalindromeAsync(id))
+            {
+                _logger.LogInformation("Palindrome is removed to the store with Id" + id);
+                return RedirectToAction(nameof(Index));
+            }
+            else
+            {
+                _logger.LogError("Error in deleting Palindrome with id " + id);
+                return RedirectToAction(nameof(Delete), id);               
+            }
         }
     }
 }
